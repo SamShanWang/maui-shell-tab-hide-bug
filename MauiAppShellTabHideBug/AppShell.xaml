@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiAppShellTabHideBug.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiAppShellTabHideBug"
+    Shell.FlyoutBehavior="Flyout">
+
+    <MenuItem x:Name="MenuItem" Text="hide tab1 show tab2 / tab3" 
+              Clicked="MenuItem_Clicked" />
+
+    <TabBar>
+        <Tab x:Name="Tab1" Title="Tab 1">
+            <ShellContent Title="Tab 1"
+                          ContentTemplate="{DataTemplate local:MainPage}"
+                          Route="MainPage" />
+        </Tab>
+
+        <Tab x:Name="Tab2" Title="Tab 2" IsVisible="false">
+            <ShellContent Title="Tab 2"
+                          ContentTemplate="{DataTemplate local:Tab2Page}"
+                          Route="Tab2Page" />
+        </Tab>
+
+        <Tab x:Name="Tab3" Title="Tab 3" IsVisible="false">
+            <ShellContent Title="Tab 3"
+                          ContentTemplate="{DataTemplate local:Tab3Page}"
+                          Route="Tab3Page" />
+        </Tab>
+    </TabBar>
+
+</Shell>
