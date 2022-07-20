@@ -9,13 +9,16 @@ public partial class AppShell : Shell
 
     private void MenuItem_Clicked(object sender, EventArgs e)
     {
-        // bug: It's OK in Android platfore, but has bug in Windows platform.
-        //Tab1.IsVisible = false;
-
+        // bug: It's OK on Windows platfore, but has bug on Android platform.
         Tab2.IsVisible = true;
         Tab3.IsVisible = true;
-
-        // bug: It's OK in Windows platfore, but has bug in Android platform.
         Tab1.IsVisible = false;
+    }
+    private void MenuItem2_Clicked(object sender, EventArgs e)
+    {
+        // bug: It's OK on Android platfore, but has bug on Windows platform.
+        Tab1.IsVisible = false;
+        Tab2.IsVisible = true;
+        Tab3.IsVisible = true;
     }
 }

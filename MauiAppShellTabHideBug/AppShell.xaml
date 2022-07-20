@@ -6,8 +6,10 @@
     xmlns:local="clr-namespace:MauiAppShellTabHideBug"
     Shell.FlyoutBehavior="Flyout">
 
-    <MenuItem x:Name="MenuItem" Text="hide tab1 show tab2 / tab3" 
+    <MenuItem x:Name="MenuItem" Text="Tap me to reproduce bug on android" 
               Clicked="MenuItem_Clicked" />
+    <MenuItem x:Name="MenuItem2" Text="Tap me to reproduce bug on windows" 
+              Clicked="MenuItem2_Clicked" />
 
     <TabBar>
         <Tab x:Name="Tab1" Title="Tab 1">
